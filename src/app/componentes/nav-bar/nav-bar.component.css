@@ -1,3 +1,14 @@
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    max-height: 50px;
+}
+
 .spacer {
     flex: 1 1 auto;
 }
@@ -6,8 +17,23 @@
     background-color: #772583;
 }
 
-.logo {
-    height: 55px; 
-    width: auto; 
-    margin-right: 10px; 
+.nav-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.hamburger-button {
+    display: none; 
+}
+
+@media (max-width: 959px) {
+    .nav-items {
+        display: none; 
+    }
+
+    .hamburger-button {
+        display: block; 
+    }
 }

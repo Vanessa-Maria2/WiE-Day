@@ -1,10 +1,27 @@
 <mat-toolbar color="primary" class="nav">
-    <img src="assets/wie2.png" alt="Logo" class="logo">
-    <div class="spacer"></div>
-    <a mat-button routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
-    <a mat-button routerLink="/evento">Evento</a>
-    <a mat-button routerLink="/programacao">Programação</a>
-    <a mat-button routerLink="/empresas">Empresas</a>
-    <a mat-button routerLink="/contato">Contato</a>
-    <a mat-raised-button routerLink="/inscricao">Inscrição</a>
+    <img src="assets/logo.png" alt="Logo" class="logo">
+    
+    <span class="spacer"></span>
+    
+    <div class="nav-items" fxLayout="row" fxLayoutGap="10px">
+        <a mat-button routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
+        <a mat-button routerLink="/evento">Evento</a>
+        <a mat-button routerLink="/programacao">Programação</a>
+        <a mat-button routerLink="/empresas">Empresas</a>
+        <a mat-button routerLink="/contato">Contato</a>
+        <a mat-raised-button routerLink="/inscricao">Inscrição</a>
+    </div>
+
+    <button mat-icon-button [matMenuTriggerFor]="menu" class="hamburger-button">
+        <mat-icon>menu</mat-icon>
+    </button>
+
+    <mat-menu #menu="matMenu" class="mat-menu">
+        <button mat-menu-item routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</button>
+        <button mat-menu-item routerLink="/evento">Evento</button>
+        <button mat-menu-item routerLink="/programacao">Programação</button>
+        <button mat-menu-item routerLink="/empresas">Empresas</button>
+        <button mat-menu-item routerLink="/contato">Contato</button>
+        <button mat-menu-item routerLink="/inscricao">Inscrição</button>
+    </mat-menu>
 </mat-toolbar>
