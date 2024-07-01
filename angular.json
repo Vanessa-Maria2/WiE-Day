@@ -26,6 +26,7 @@
             ],
             "styles": [
               "@angular/material/prebuilt-themes/deeppurple-amber.css",
+              "node_modules/@mdi/font/css/materialdesignicons.min.css",
               "src/styles.css"
             ],
             "scripts": [],
