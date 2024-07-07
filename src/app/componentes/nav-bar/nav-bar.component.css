@@ -25,15 +25,15 @@
 }
 
 .hamburger-button {
-    display: none; 
+    display: none;
 }
 
 @media (max-width: 959px) {
     .nav-items {
-        display: none; 
+        display: none;
     }
 
     .hamburger-button {
-        display: block; 
+        display: block;
     }
 }

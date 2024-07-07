@@ -1,0 +1,55 @@
+.event-card {
+  width: 100%; 
+  max-width: 1000px;
+  margin: 20px auto;
+  margin-top: 50px;
+}
+
+mat-card-content {
+  padding: 15px;
+  display: flex;
+  justify-content: center; 
+  flex-direction: column; 
+}
+
+.header {
+  background-color: #772583; 
+  color: #f5f5f5;
+  display: flex; 
+  border-radius: 5px 5px 0 0;
+}
+
+.header h3 {
+  margin: 10px;
+}
+
+.event-row {
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+}
+
+.event-time,
+.event-activity {
+  padding: 5px;
+}
+
+.event-time {
+  flex: 2; 
+}
+
+.event-activity {
+  flex: 8; 
+}
+
+@media (max-width: 768px) {
+  .event-time,
+  .event-activity {
+    flex: 1; 
+  }
+}
+
+.titulo {
+  color: #772583;
+  font-weight: bolder;
+}

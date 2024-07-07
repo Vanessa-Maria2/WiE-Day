@@ -1,0 +1,17 @@
+<mat-card class="event-card">
+    <div class="event-titulo">
+        <h2 class="titulo">{{titulo}}</h2>
+    </div>
+    <div class="event-row header">
+        <h3 class="event-time">Horário</h3>
+        <h3 class="event-activity">Atividade</h3>
+    </div>
+    <mat-card-content>
+        <div *ngFor="let event of eventData">
+            <div class="event-row">
+                <span class="event-time">{{ event.time }}</span>
+                <span class="event-activity">{{ event.activity }}</span>
+            </div>
+        </div>
+    </mat-card-content>
+</mat-card>
