@@ -5,13 +5,13 @@ import { Evento } from '../../interfaces/Event';
 
 
 @Component({
-  selector: 'app-card-programacao',
+  selector: 'app-card-schedule',
   standalone: true,
   imports: [MatCardModule, CommonModule],
-  templateUrl: './card-programacao.component.html',
-  styleUrl: './card-programacao.component.css'
+  templateUrl: './card-schedule.component.html',
+  styleUrl: './card-schedule.component.css'
 })
-export class CardProgramacaoComponent {
+export class CardScheduleComponent {
   @Input() eventData!: Evento[];
   @Input() titulo!: string;
 }

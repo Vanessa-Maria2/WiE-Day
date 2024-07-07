@@ -3,13 +3,13 @@ import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
 import { NavBarComponent } from './componentes/nav-bar/nav-bar.component';
 import { FooterComponent } from './componentes/footer/footer.component';
 import { CardParticipantComponent } from './componentes/card-participant/card-participant.component';
-import { CardProgramacaoComponent } from './componentes/card-programacao/card-programacao.component';
 import { Evento } from './interfaces/Event';
+import { CardScheduleComponent } from './componentes/card-schedule/card-schedule.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NavBarComponent, FooterComponent, CardParticipantComponent, CardProgramacaoComponent],
+  imports: [RouterOutlet, NavBarComponent, FooterComponent, CardParticipantComponent, CardScheduleComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
