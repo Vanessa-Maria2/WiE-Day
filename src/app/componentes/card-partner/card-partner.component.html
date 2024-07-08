@@ -1,3 +1,4 @@
+<h3 class="titulo">{{title}}</h3>
 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-4 m-10">
     <mat-card *ngFor="let item of partners" class="card rounded overflow-hidden shadow-sm m-4">
             <mat-card-title-group>
@@ -5,7 +6,7 @@
                     <mat-card-title>{{ item.name }}</mat-card-title>
                     {{ item.content }}
                 </mat-card-content>
-                <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" class="w-full h-60 md:h-auto lg:h-auto object-cover">
+                <img mat-card-xl-image [src]="item.imagePath" class="w-full h-60 md:h-auto lg:h-auto object-cover">
             </mat-card-title-group>
     </mat-card>
 </div>

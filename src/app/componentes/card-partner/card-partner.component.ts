@@ -12,4 +12,5 @@ import { CommonModule } from '@angular/common';
 })
 export class CardPartnerComponent {
   @Input() partners: Partner[] = [];
+  @Input() title: string = '';
 }
