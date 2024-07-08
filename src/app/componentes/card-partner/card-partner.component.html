@@ -1,12 +1,11 @@
 <mat-card class="example-card" appearance="outlined">
-    <mat-card-header>
-      <mat-card-title-group>
-        <mat-card-title>Shiba Inu</mat-card-title>
-        <mat-card-subtitle>Extra large</mat-card-subtitle>
-        <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" >
-      </mat-card-title-group>
-    </mat-card-header>
-    <mat-card-content>
-      {{name}}
-    </mat-card-content>
-  </mat-card>
+    <div *ngFor="let item of partners">
+        <mat-card-title-group>
+            <mat-card-content>
+                <mat-card-title>{{ item.name }}</mat-card-title>
+                {{ item.content }}
+            </mat-card-content>
+            <img mat-card-xl-image src="https://material.angular.io/assets/img/examples/shiba2.jpg">
+        </mat-card-title-group>
+    </div>
+</mat-card>
