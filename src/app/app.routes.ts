@@ -5,6 +5,7 @@ import { AboutComponent } from './componentes/about/about.component';
 import { AboutPartnerComponent } from './componentes/about-partner/about-partner.component';
 
 export const routes: Routes = [
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
     {path: 'home', component: HomeComponent},
     {path: 'evento', component: AboutComponent},
     {path: 'programacao', component: EventScheduleComponent},
