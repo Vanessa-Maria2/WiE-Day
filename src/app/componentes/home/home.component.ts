@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CardPartnerComponent } from '../card-partner/card-partner.component';
 import { Partner } from '../../interfaces/Partner';
+import { ListParticipantsComponent } from '../list-participants/list-participants.component';
 
 @Component({
   selector: 'app-home',
   standalone: true,
-  imports: [CardPartnerComponent],
+  imports: [CardPartnerComponent, ListParticipantsComponent],
   templateUrl: './home.component.html',
   styleUrl: './home.component.css'
 })
