@@ -1,0 +1,46 @@
+<div class="flex justify-center mt-20">
+  <mat-card class="flex flex-col items-center max-w-lg rounded-lg shadow-md">
+    <mat-card-title>Fale conosco</mat-card-title>
+    <mat-card-content class="w-full max-w-lg">
+      <form [formGroup]="form" (ngSubmit)="onSubmit()">
+        <div class="grid grid-cols-12 gap-4">
+          <div class="col-span-12">
+            <mat-form-field appearance="fill" class="w-full">
+              <mat-label>Nome</mat-label>
+              <input matInput formControlName="name" class="w-full">
+              <mat-error *ngIf="form.get('name')?.hasError('required')">O nome é obrigatório</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12 sm:col-span-6">
+            <mat-form-field appearance="fill" class="w-full">
+              <mat-label>Email</mat-label>
+              <input matInput formControlName="email" class="w-full">
+              <mat-error *ngIf="form.get('email')?.hasError('required')">O email é obrigatório</mat-error>
+              <mat-error *ngIf="form.get('email')?.hasError('email')">Email inválido</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12 sm:col-span-6">
+            <mat-form-field appearance="fill" class="w-full">
+              <mat-label>Contato</mat-label>
+              <input matInput formControlName="contact" class="w-full">
+              <mat-error *ngIf="form.get('contact')?.hasError('required')">O contato é obrigatório</mat-error>
+            </mat-form-field>
+          </div>
+
+          <div class="col-span-12">
+            <mat-form-field appearance="fill" class="w-full">
+              <mat-label>Descrição</mat-label>
+              <textarea matInput placeholder="Digite sua mensagem..." formControlName="description"
+                class="w-full"></textarea>
+            </mat-form-field>
+          </div>
+        </div>
+      </form>
+    </mat-card-content>
+    <div class="text-center mt-4">
+      <button mat-raised-button color="primary" type="submit" class="px-4 py-2 bg-purple-600 text-white mb-10">Enviar</button>
+    </div>
+  </mat-card>
+</div>
