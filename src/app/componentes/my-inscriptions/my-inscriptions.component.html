@@ -1,0 +1,10 @@
+<mat-card>
+    <mat-card-title>Minhas Inscrições</mat-card-title>
+    <mat-card-content>
+        <div *ngFor="let registration of registrations" class="registration-item">
+            <h3>{{ registration.eventName }}</h3>
+            <p>Nome: {{ registration.userName }}</p>
+            <p>Email: {{ registration.userEmail }}</p>
+        </div>
+    </mat-card-content>
+</mat-card>
