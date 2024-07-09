@@ -1,5 +1,5 @@
 <div class="flex flex-wrap w-full justify-center gap-10 my-10">
-    <mat-card *ngFor="let item of participants" class="w-[220px]" appearance="outlined">
+    <mat-card *ngFor="let item of participants" class="w-[220px] hover:cursor-pointer" appearance="outlined" (click)="openDialog(item)">
         <div class="h-[300px] object-cover">
             <img class="object-cover w-full h-full" mat-card-image [src]="item.imagePath" alt="Participant Image">
         </div>

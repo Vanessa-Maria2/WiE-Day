@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { Participant } from '../../interfaces/Participant';
 import { CardParticipantComponent } from '../card-participant/card-participant.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-list-participants',
   standalone: true,
-  imports: [CardParticipantComponent],
+  imports: [CardParticipantComponent, MatDialogModule],
   templateUrl: './list-participants.component.html',
   styleUrl: './list-participants.component.css'
 })
