@@ -1,12 +1,15 @@
-<mat-card class="example-card" appearance="outlined">
-    <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-    <mat-card-content>
-        <h3 class="text-center text-[#772583]" style="margin: 16px; font-weight: bold">
-            Anna Giselle
-        </h3>
-        <p class="text-[#772583] truncate-text">
-            Professora do IMD, graduada em Ciência da Computação, especializada em Inteligência Artificial e com
-            diversos projetos em andamento na área de Machine Learning e Data Science.
-        </p>
-    </mat-card-content>
-</mat-card>
+<div class="flex flex-wrap w-full justify-center gap-10 my-10">
+    <mat-card *ngFor="let item of participants" class="w-[220px] hover:cursor-pointer" appearance="outlined" (click)="openDialog(item)">
+        <div class="h-[300px] object-cover">
+            <img class="object-cover w-full h-full" mat-card-image [src]="item.imagePath" alt="Participant Image">
+        </div>
+        <mat-card-content>
+            <h3 class="text-center text-[#772583]" style="margin: 16px; font-weight: bold">
+                {{item.name}}
+            </h3>
+            <p class="text-[#772583] truncate-text">
+                {{item.content}}
+            </p>
+        </mat-card-content>
+    </mat-card>
+</div>
