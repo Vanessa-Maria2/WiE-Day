@@ -1,28 +1,30 @@
-<mat-card>
-    <mat-card-title>Inscrição para Evento</mat-card-title>
-    <mat-card-content>
-      <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()">
-        <mat-form-field appearance="fill">
-          <mat-label>Nome do Evento</mat-label>
-          <input matInput formControlName="eventName">
-          <mat-error *ngIf="registrationForm.get('eventName')?.hasError('required')">O nome do evento é obrigatório</mat-error>
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>Nome</mat-label>
-          <input matInput formControlName="userName">
-          <mat-error *ngIf="registrationForm.get('userName')?.hasError('required')">O nome é obrigatório</mat-error>
-        </mat-form-field>
-  
-        <mat-form-field appearance="fill">
-          <mat-label>Email</mat-label>
-          <input matInput formControlName="userEmail">
-          <mat-error *ngIf="registrationForm.get('userEmail')?.hasError('required')">O email é obrigatório</mat-error>
-          <mat-error *ngIf="registrationForm.get('userEmail')?.hasError('email')">Email inválido</mat-error>
-        </mat-form-field>
-  
-        <button mat-raised-button color="primary" type="submit">Inscrever</button>
-      </form>
-    </mat-card-content>
-  </mat-card>
-  
+<div class="flex flex-col w-full justify-center items-center h-[calc(100vh-100px)]">
+  <h3 class="titulo text-center">Inscrição</h3>
+  <form [formGroup]="registrationForm" (ngSubmit)="onSubmit()" class="flex flex-col w-[400px]">
+    <mat-form-field appearance="fill">
+      <mat-label>Nome</mat-label>
+      <input matInput formControlName="userName">
+      <mat-error *ngIf="registrationForm.get('userName')?.hasError('required')">O nome é obrigatório</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Email</mat-label>
+      <input matInput formControlName="userEmail">
+      <mat-error *ngIf="registrationForm.get('userEmail')?.hasError('required')">O email é obrigatório</mat-error>
+      <mat-error *ngIf="registrationForm.get('userEmail')?.hasError('email')">Email inválido</mat-error>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Nome do Evento</mat-label>
+      <mat-select matInput formControlName="eventName">
+        <mat-option value="one">First option</mat-option>
+        <mat-option value="two">Second option</mat-option>
+      </mat-select>
+      <mat-error *ngIf="registrationForm.get('eventName')?.hasError('required')">
+        O nome do evento é obrigatório
+      </mat-error>
+    </mat-form-field>
+
+    <button mat-raised-button color="primary" type="submit">Inscrever</button>
+  </form>
+</div>

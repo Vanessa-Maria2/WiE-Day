@@ -1,14 +1,17 @@
 <mat-toolbar color="primary" class="nav">
     <img src="assets/logo.png" alt="Logo" class="logo">
-    
+
     <span class="spacer"></span>
-    
+
     <div class="nav-items" fxLayout="row" fxLayoutGap="10px">
         <a mat-button routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page">Home</a>
         <a mat-button routerLink="/evento">Evento</a>
         <a mat-button routerLink="/programacao">Programação</a>
         <a mat-button routerLink="/parceiros">Parceiros</a>
         <a mat-button routerLink="/contato">Contato</a>
+        <ng-container *ngIf="hasRegistrations">
+            <a mat-button routerLink="/minhas-inscricoes">Minhas Inscrições</a>
+        </ng-container>
         <a mat-raised-button routerLink="/inscricao">Inscrição</a>
     </div>
 

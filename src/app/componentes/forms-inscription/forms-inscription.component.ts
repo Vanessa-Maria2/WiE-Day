@@ -3,13 +3,14 @@ import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angula
 import { RegistrationService } from '../../services/registration.service';
 import { MatInputModule } from '@angular/material/input';
 import { MatButtonModule } from '@angular/material/button';
-import { MatCardModule } from '@angular/material/card';
+import {MatSelectModule} from '@angular/material/select';
+import { Router } from '@angular/router';
 import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-forms-inscription',
   standalone: true,
-  imports: [ReactiveFormsModule, MatInputModule, MatButtonModule, MatCardModule, CommonModule],
+  imports: [ReactiveFormsModule, MatSelectModule, MatInputModule, MatButtonModule, CommonModule],
   templateUrl: './forms-inscription.component.html',
   styleUrl: './forms-inscription.component.css'
 })
@@ -18,7 +19,8 @@ export class FormsInscriptionComponent {
 
   constructor(
     private fb: FormBuilder,
-    private registrationService: RegistrationService
+    private registrationService: RegistrationService,
+    private router: Router
   ) {
     this.registrationForm = this.fb.group({
       eventName: ['', Validators.required],
@@ -32,6 +34,7 @@ export class FormsInscriptionComponent {
       this.registrationService.addRegistration(this.registrationForm.value);
       alert('Inscrição realizada com sucesso!');
       this.registrationForm.reset();
+      this.router.navigate(['/minhas-inscricoes']);
     }
   }
 }
