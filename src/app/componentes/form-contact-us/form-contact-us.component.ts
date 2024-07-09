@@ -3,7 +3,8 @@ import { Component } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
-
+import { ContactUsService } from '../../services/contact-us.service';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-form-contact-us',
@@ -17,6 +18,8 @@ export class FormContactUsComponent {
 
   constructor(
     private fb: FormBuilder,
+    private contactUsService: ContactUsService,
+    private router: Router
   ) {
     this.form = this.fb.group({
       name: ['', Validators.required],
@@ -27,6 +30,11 @@ export class FormContactUsComponent {
   }
 
   onSubmit() {
-    
+    if (this.form.valid) {
+      this.contactUsService.addMessage(this.form.value);
+      alert('Mensagem enviada com sucesso!');
+      this.form.reset();
+      this.router.navigate(['/home']);
+    }
   }
 }
