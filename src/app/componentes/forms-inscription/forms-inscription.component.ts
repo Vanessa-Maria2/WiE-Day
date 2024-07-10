@@ -23,12 +23,35 @@ export class FormsInscriptionComponent {
     private router: Router
   ) {
     this.registrationForm = this.fb.group({
-      eventName: ['', Validators.required],
       userName: ['', Validators.required],
-      userEmail: ['', [Validators.required, Validators.email]]
+      userEmail: ['', [Validators.required, Validators.email]],
+      userPhone: ['', Validators.pattern(/^\(\d{2}\) \d{5}-\d{4}$/)],
+      userCourse: ['']
     });
   }
 
+  formatPhoneNumber(): void {
+    let phoneNumber = this.registrationForm.get('userPhone')?.value;
+    if (phoneNumber) {
+      // Remove todos os caracteres não numéricos
+      let cleaned = ('' + phoneNumber).replace(/\D/g, '');
+      // Limita a 11 dígitos
+      cleaned = cleaned.slice(0, 11);
+
+      // Formatação progressiva
+      if (cleaned.length > 0) {
+        cleaned = '(' + cleaned;
+      }
+      if (cleaned.length > 2) {
+        cleaned = cleaned.slice(0, 3) + ') ' + cleaned.slice(3);
+      }
+      if (cleaned.length > 9) {
+        cleaned = cleaned.slice(0, 10) + '-' + cleaned.slice(10);
+      }
+
+      this.registrationForm.get('userPhone')?.setValue(cleaned, { emitEvent: false });
+    }
+  }
   onSubmit(): void {
     if (this.registrationForm.valid) {
       this.registrationService.addRegistration(this.registrationForm.value);

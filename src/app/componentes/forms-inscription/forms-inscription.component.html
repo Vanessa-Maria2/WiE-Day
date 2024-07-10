@@ -15,6 +15,16 @@
     </mat-form-field>
 
     <mat-form-field appearance="fill">
+      <mat-label>Contato</mat-label>
+      <input matInput formControlName="userPhone" (input)="formatPhoneNumber()">
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Curso</mat-label>
+      <input matInput formControlName="userCourse">
+    </mat-form-field>
+<!-- 
+    <mat-form-field appearance="fill">
       <mat-label>Nome do Evento</mat-label>
       <mat-select matInput formControlName="eventName">
         <mat-option value="one">First option</mat-option>
@@ -24,7 +34,7 @@
         O nome do evento é obrigatório
       </mat-error>
     </mat-form-field>
-
+ -->
     <button mat-raised-button color="primary" type="submit">Inscrever</button>
   </form>
 </div>
