@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { RegistrationService } from '../../services/registration.service';
-import { Registration } from '../../interfaces/Registration';
+import { Registration } from '../../models/Registration';
 import { MatCardModule } from '@angular/material/card';
 import { CommonModule } from '@angular/common';
 import { MatTableModule } from '@angular/material/table';

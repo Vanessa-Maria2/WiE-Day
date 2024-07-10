@@ -1,6 +1,6 @@
 import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { Partner } from '../../interfaces/Partner';
+import { Partner } from '../../models/Partner';
 import { CommonModule } from '@angular/common';
 
 @Component({

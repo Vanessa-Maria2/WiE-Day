@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component, Input } from '@angular/core';
 import { MatCardModule } from '@angular/material/card';
-import { Evento } from '../../interfaces/Event';
+import { Evento } from '../../models/Event';
 
 
 @Component({

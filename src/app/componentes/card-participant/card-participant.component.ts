@@ -1,7 +1,7 @@
 import {ChangeDetectionStrategy, Component, Input} from '@angular/core';
 import {MatButtonModule} from '@angular/material/button';
 import {MatCardModule} from '@angular/material/card';
-import {Participant} from '../../interfaces/Participant';
+import {Participant} from '../../models/Participant';
 import { CommonModule } from '@angular/common';
 import { MatDialog } from '@angular/material/dialog';
 import { DialogParticipantComponent } from '../dialog-participant/dialog-participant.component';

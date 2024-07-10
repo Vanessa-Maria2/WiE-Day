@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Participant } from '../../interfaces/Participant';
+import { Participant } from '../../models/Participant';
 import { CardParticipantComponent } from '../card-participant/card-participant.component';
 import { MatDialogModule } from '@angular/material/dialog';
 

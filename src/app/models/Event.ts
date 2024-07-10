@@ -1,4 +1,4 @@
-export interface Evento {
+export type Evento = {
     time: string; 
     activity: string; 
 }

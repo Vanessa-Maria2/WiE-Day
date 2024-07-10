@@ -1,4 +1,4 @@
-export interface Message {
+export type Message = {
     name: string;
     email: string;
     contact: string;

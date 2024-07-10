@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardPartnerComponent } from '../card-partner/card-partner.component';
-import { Partner } from '../../interfaces/Partner';
+import { Partner } from '../../models/Partner';
 
 @Component({
   selector: 'app-about-partner',
