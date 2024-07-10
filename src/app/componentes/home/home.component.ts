@@ -13,9 +13,9 @@ import { ListParticipantsComponent } from '../list-participants/list-participant
 export class HomeComponent {
   title = 'Grupos e startups';
   partners: Partner[] = [
-    { name: 'GPH', content: 'Grupo de extensão da UFRN dedicado a difundir o conhecimento científico e tecnológico. Oferecemos cursos tanto para o público interno quanto externo da UFRN, além de disponibilizar materiais de estudo no GitHub e Instagram. Também participamos e organizamos eventos focados em problemas relacionados à nossa área de pesquisa para aproximar a sociedade dos profissionais da área.',         imagePath: 'assets/logo_metropole_parque.jpg'
+    { name: 'GPH', content: 'Grupo de extensão da UFRN dedicado a difundir o conhecimento científico e tecnológico. Oferecemos cursos tanto para o público interno quanto externo da UFRN, além de disponibilizar materiais de estudo no GitHub e Instagram. Também participamos e organizamos eventos focados em problemas relacionados à nossa área de pesquisa para aproximar a sociedade dos profissionais da área.', imagePath: 'assets/logo_gph.jpeg'
     },
-    { name: 'MEG', content: 'O projeto MEG surgiu com o intuito de fazer um ambiente acadêmico e trabalhista na área das exatas mais agradável e convidativo para meninas e mulheres. O projeto atua com meninas de ensino médio, com oficinas de forma prática para desmitificar e descomplicar a matemática, ciências, computação e engenharias.',         imagePath: 'assets/logo_metropole_parque.jpg'
+    { name: 'MEG', content: 'O projeto MEG surgiu com o intuito de fazer um ambiente acadêmico e trabalhista na área das exatas mais agradável e convidativo para meninas e mulheres. O projeto atua com meninas de ensino médio, com oficinas de forma prática para desmitificar e descomplicar a matemática, ciências, computação e engenharias.', imagePath: 'assets/logo_meg.png'
     },
     {
       name: 'POTIGUAR ROCKET DESIGN', content: 'A Potiguar Rocket Design (PRD) é uma equipe voluntária de Tecnologias Aeroespaciais da UFRN, nascida em 2016, esse projeto de extensão tem 3 objetivos principais: ' +
