@@ -1,4 +1,4 @@
-export interface Partner {
+export type Partner = {
     name: string; 
     content: string; 
     imagePath: string;

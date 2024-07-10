@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CardScheduleComponent } from '../card-schedule/card-schedule.component';
-import { Evento } from '../../interfaces/Event';
+import { Evento } from '../../models/Event';
 
 @Component({
   selector: 'app-event-schedule',
