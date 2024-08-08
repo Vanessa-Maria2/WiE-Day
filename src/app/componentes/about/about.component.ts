@@ -1,11 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { GoogleMap } from '@angular/google-maps';
 import { interval, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-about',
   standalone: true,
-  imports: [GoogleMap],
+  imports: [],
   templateUrl: './about.component.html',
   styleUrl: './about.component.css'
 })
